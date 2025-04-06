@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Test</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('registerForm');
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Registration would submit: ' + 
+              JSON.stringify({
+                email: form.email.value,
+                password: form.password.value,
+                role: 'student'
+              }));
+      });
+    });
+  </script>
+</head>
+<body>
+  <form id="registerForm">
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+    <button type="submit">Register</button>
+  </form>
+</body>
+</html>
