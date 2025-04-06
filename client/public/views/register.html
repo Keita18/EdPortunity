@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - EDPORTUNITY</title>
+  <link href="/css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="register-container">
+    <h1>Create Your Account</h1>
+    <form id="registerForm">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required minlength="6">
+      </div>
+      <input type="hidden" id="role" name="role" value="student">
+      <button type="submit" class="btn">Register</button>
+    </form>
+  </div>
+  <script src="/js/register.js"></script>
+</body>
+</html>
