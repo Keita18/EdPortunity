@@ -1,5 +1,17 @@
 const express = require('express');
 const router = express.Router();
+const path = require('path');
+
+// @route    GET /register
+// @desc     Get registration page
+// @access   Public
+router.get('/register', (req, res) => {
+  const { type } = req.query;
+  if (!type || !['student', 'school', 'employer'].includes(type)) {
+    return res.status(400).json({ msg: 'Invalid user type specified' });
+  }
+  res.sendFile(path.join(__dirname, '../../client/public/views/register.html'));
+});
 const { check, validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
